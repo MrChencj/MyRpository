@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			var second;
+			window.onload = function() {
+				second = document.getElementById("second").innerText;
+
+				setInterval("changSecond()", 1000);
+			}
+
+			function changSecond() {
+				if(second == 0) {
+					window.location.href = "../MenuServlet?oprationType=getAllMenu";
+				}
+				second--;
+				document.getElementById("second").innerText = second;
+			}
+		
+		</script>
+	</head>
+	<body>
+		<p style="font-size: 20px;color: red;">修改成功</p>页面将在<span id="second">3</span>秒之后跳转首页
+	</body>
+</html>
