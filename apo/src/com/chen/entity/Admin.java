@@ -2,6 +2,7 @@ package com.chen.entity;
 
 public class Admin {
 	private int id;
+	private  int nam;
 	private String name;
 	private String password;
 	public int getId() {
